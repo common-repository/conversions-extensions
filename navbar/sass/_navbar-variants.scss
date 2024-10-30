@@ -1,0 +1,110 @@
+// Navbar variant styles
+#wrapper-navbar .navbar {
+	// Navbar below specific
+	&.navbar-below {
+		@media (max-width: 991.98px) {
+			border-bottom: 1px solid var(--bs-gray-300);
+		}
+		@media (min-width: 992px) {
+			flex-flow: column nowrap;
+			align-items: normal;
+			padding: 0;
+		}
+		.navbar-below-branding,
+		.navbar-below-menu {
+			@media (min-width: 992px) {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+		}
+		.navbar-below-branding {
+			@media (max-width: 991.98px) {
+				padding-top: 0;
+				padding-bottom: 0;
+				width: 100%;
+			}
+			.container-fluid {
+				display: flex;
+				flex-wrap: inherit;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.nav-extras {
+				margin: 0;
+				@media (max-width: 991.98px) {
+					display: none;
+				}
+				@media (min-width: 992px) {
+					display: flex;
+					align-items: center;
+				}
+				.list-inline-item {
+					margin-right: 0;
+					.nav-link {
+						padding: .5rem;
+					}
+				}
+				.nav-callout-button {
+					margin-left: .75rem;
+				}
+			}
+		}
+		.navbar-below-menu {
+			@media (max-width: 991.98px) {
+				width: 100%;
+				background: #fff !important;
+			}
+			li:first-child a.nav-link {
+				@media (min-width: 992px) {
+					padding-left: 0;
+				}
+			}
+			.nav-link {
+				@media (max-width: 991.98px) {
+					color: #000;
+				}
+				@media (min-width: 992px) {
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
+				&:hover {
+					@media (max-width: 991.98px) {
+						color: rgba(0,0,0,.8);
+					}
+				}
+			}
+			.active > .nav-link,
+			.nav-link.active,
+			.nav-link.show,
+			.show > .nav-link {
+				@media (max-width: 991.98px) {
+					color: rgba(0,0,0,.8);
+				}
+			}
+			// Hide extras on desktop.
+			.nav-item {
+				&.account-icon,
+				&.cart,
+				&.search-icon,
+				&.nav-callout-button {
+					@media (min-width: 992px) {
+						display: none;
+					}
+				}
+			}
+			.c-nav__social {
+				@media (min-width: 992px) {
+					display: none;
+				}
+			}
+		}
+
+		// Drop down menu
+		.dropdown-menu {
+			@media (min-width: 992px) {
+				margin-top: 0;
+				border-radius: 0 0 .25rem .25rem;
+			}
+		}
+	}
+}
